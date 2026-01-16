@@ -1,2 +1,5 @@
 .env
 *.json
+*.db
+__pycache__
+.vscode

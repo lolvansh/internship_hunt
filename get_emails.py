@@ -16,7 +16,7 @@ def extract_emails_from_page(url):
             return []
         
         soup = BeautifulSoup(response.content, 'html.parser')
-        page_text = soup.get_text()
+        page_text = soup.get_text(separator=' ')
         
         mailto_links = soup.find_all('a', href=re.compile(r'^mailto:'))
         mailto_emails = [link['href'].replace('mailto:', '').split('?')[0] for link in mailto_links]
