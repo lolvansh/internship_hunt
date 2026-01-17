@@ -64,13 +64,21 @@ def get_place_details(place_id, api_key):
         print(e)
         return None
     
+    
+def load_queries(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        
+    all_queries = []
+    for query in data.values():
+        all_queries.extend(query)
+    return all_queries
+    
 
 if __name__ == '__main__':
+    
     api_key = os.environ.get('API_KEY')
-    queries = ["software companies in vesu, Surat",
-        "IT services in vesu, Surat",  # High chance of overlap
-        "tech companies in varacha Surat"
-        ]
+    queries = load_queries('queries.json')
     
     if not api_key:
         print("Error: API Key not found.")

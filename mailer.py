@@ -11,14 +11,14 @@ from database.db_conn import Application
 
 # --- CONFIGURATION ---
 SENDER_EMAIL = "vansh.pandya.77@gmail.com"
-APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
+APP_PASSWORD = 'tkej tcph qwiv bdad'
 RESUME_FILENAME = r"D:\python\cloud-cli\assets\Resume.pdf"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "database", "applications.db")
 DB_FILE = f"sqlite:///{DB_PATH}"
 
 # Safety Limits
-DAILY_LIMIT = 80
+DAILY_LIMIT = 70
 MIN_DELAY = 60    
 MAX_DELAY = 300   
 TEST_MODE = False 
@@ -114,7 +114,7 @@ def main():
                 
                 # Random spam-prevention delay
                 delay = random.randint(MIN_DELAY, MAX_DELAY)
-                print(f"  ⏳ Sleeping {delay}s...")
+                print(f"Sleeping {delay}s...")
                 time.sleep(delay)
         else:
             if not TEST_MODE:
