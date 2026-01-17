@@ -89,7 +89,7 @@ def process_single_company(company):
     
 
 def main():
-    input_file = 'companies.json'
+    input_file = 'comapany_with_no_emails.json'
     output_file = 'companies_with_emails.json'
     
     try:

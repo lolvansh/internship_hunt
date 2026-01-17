@@ -5,7 +5,7 @@ from email.message import EmailMessage
 
 # --- CONFIGURATION ---
 SENDER_EMAIL = "vansh.pandya.77@gmail.com"
-APP_PASSWORD = "tkej tcph qwiv bdad"
+APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 RESUME_FILENAME = r"D:\python\cloud-cli\assets\Resume.pdf"
 
 # Target for the spam test

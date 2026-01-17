@@ -67,37 +67,40 @@ def get_place_details(place_id, api_key):
 
 if __name__ == '__main__':
     api_key = os.environ.get('API_KEY')
-    query = "software companies in Adajan, Surat"
+    queries = ["software companies in vesu, Surat",
+        "IT services in vesu, Surat",  # High chance of overlap
+        "tech companies in varacha Surat"
+        ]
     
     if not api_key:
         print("Error: API Key not found.")
     else:
-
-        results = get_place_info(query, api_key, max_results=60)  
-        
-        if results:  
-            print(f"Total companies found: {len(results)}")
+        all_companies = []
+        seen_place_ids = set()
+        duplicate_count = 0
+        for query in queries:
+            print(f"Searching for: {query}")
+            results = get_place_info(query, api_key, max_results=60)
             
-            companies_with_websites = []
-            
-            for place in results:
-                place_id = place.get('place_id')
-                name = place.get('name')
+            if results:
+                for place in results:
+                    place_id = place.get('place_id')
+                    name = place.get('name')
+                    
+                    if place_id in seen_place_ids:
+                        duplicate_count += 1
+                        continue
+                    place_details = get_place_details(place_id, api_key)
+                    
+                    if place_details and place_details.get('status') == 'OK':
+                        details = place_details.get('result', {})
+                        all_companies.append(details)
+                        seen_place_ids.add(place_id)
+                        
+                    time.sleep(0.2)
+            else:
+                print(f"No results found for {query}")
                 
-                print(f"Getting details for: {name}")
-                
-                place_details = get_place_details(place_id, api_key)
-                
-                if place_details and place_details.get('status') == 'OK':
-                    companies_with_websites.append(place_details.get('result', {}))
-                
-                time.sleep(0.2)
-            
-            # Save to file
-            file_name = 'companies.json'
-            with open(file_name, 'w', encoding='utf-8') as f:
-                json.dump(companies_with_websites, f, indent=4, ensure_ascii=False)
-            
-            print(f"✅ Saved {len(companies_with_websites)} companies to {file_name}")
-        else:
-            print("No companies found!")
+    file_name = 'comapany_with_no_emails.json'
+    with open(file_name, 'w', encoding='utf-8') as f:
+        json.dump(all_companies, f, indent=4, ensure_ascii=False)

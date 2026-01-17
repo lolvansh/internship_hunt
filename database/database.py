@@ -39,16 +39,19 @@ def import_data():
     
     for c in companies:
         name = c.get('name')
+        website = c.get('website')
+        emails = c.get('emails', [])
         
         # 1. Check if company exists in DB
-        exists = session.query(Application).filter_by(company_name=name).first()
+        exists = session.query(Application).filter(
+        (Application.company_name == name) | (Application.website == website)
+    ).first()
         if exists:
             skipped += 1
             continue 
             
         # 2. Prepare new data
-        website = c.get('website')
-        emails = c.get('emails', [])
+
         best_email = get_best_email(emails)
         
         # 3. Add to session
