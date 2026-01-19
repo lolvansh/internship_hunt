@@ -5,15 +5,8 @@ from pathlib import Path
 from datetime import datetime
 
 def run_script(script_path, description=""):
-    """
-    Run a Python script and return success status
-    
-    Args:
-        script_path: Path to the script (str or Path)
-        description: Optional description of what the script does
-    """
     script_path = Path(script_path)
-    
+
     print(f"\n{'='*60}")
     print(f"RUNNING: {script_path.name}")
     if description:
@@ -72,17 +65,19 @@ def main():
         }
     ]
     
-
+    
     for i, step in enumerate(pipeline, 1):
         print(f"\n📍 STEP {i}/{len(pipeline)}")
         
         if not run_script(step['script'], step['description']):
             print(f"\n❌ PIPELINE FAILED at step {i}: {step['script']}")
+
             print("Previous steps completed successfully")
             return False
     
     # Calculate duration
     duration = datetime.now() - start_time
+
     
     print("\n" + "="*60)
     print("✅ PIPELINE COMPLETE - ALL STEPS SUCCESSFUL")

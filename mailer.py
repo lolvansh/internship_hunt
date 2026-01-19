@@ -18,7 +18,7 @@ DB_PATH = os.path.join(BASE_DIR, "database", "applications.db")
 DB_FILE = f"sqlite:///{DB_PATH}"
 
 # Safety Limits
-DAILY_LIMIT = 70
+DAILY_LIMIT = 80
 MIN_DELAY = 60    
 MAX_DELAY = 300   
 TEST_MODE = False 
