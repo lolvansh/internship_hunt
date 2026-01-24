@@ -13,8 +13,8 @@ def get_best_email(email_list):
     
     # Priority Logic
     for kw in ['hr@', 'career', 'job', 'talent', 'intern']:
-        for e in emails:
-            if kw in e: return e
+        for e in emails:                
+            if kw in e: return 
     for kw in ['info@', 'hello@', 'contact@']:
         for e in emails:
             if kw in e: return e

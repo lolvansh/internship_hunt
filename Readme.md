@@ -10,6 +10,8 @@ Right now its not fully connected to each other, i will do it in upcoming days, 
 1. your emails app password(find in your mail setting)
 2. google's Places api key
 3. install the dependencies
+4. create a env where you save your app pass and api
+5. create your own queries.json
 ```
 
 
@@ -18,7 +20,7 @@ Right now its not fully connected to each other, i will do it in upcoming days, 
 ### Phase 1: Data Collection
 1.  **Initial Scrape:** Fetches data from Google Maps.
     ```bash
-    python company_details.py
+    python company_details.py(please create your own queries.json or ask me to give it to you)
     ```
 2.  **Deep Scan:** Get emails from the companies url
     ```bash

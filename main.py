@@ -32,8 +32,8 @@ def run_script(script_path, description=""):
         
     except subprocess.CalledProcessError as e:
         print(f"❌ ERROR: {script_path.name} failed with exit code {e.returncode}")
-        return False
     except Exception as e:
+        
         print(f"❌ UNEXPECTED ERROR running {script_path.name}: {e}")
         return False
 

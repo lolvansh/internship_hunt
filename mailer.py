@@ -10,15 +10,15 @@ from sqlalchemy.orm import sessionmaker
 from database.db_conn import Application
 
 # --- CONFIGURATION ---
-SENDER_EMAIL = "vansh.pandya.77@gmail.com"
-APP_PASSWORD = 'tkej tcph qwiv bdad'
+SENDER_EMAIL = "vansh.pandya.77@gmail.com" # please change it to your email
+APP_PASSWORD = 'xxxx xxxx xxxx xxxx'#this is just a placeholder, replace with actual app password and keep it secure in the env
 RESUME_FILENAME = r"D:\python\cloud-cli\assets\Resume.pdf"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "database", "applications.db")
 DB_FILE = f"sqlite:///{DB_PATH}"
 
 # Safety Limits
-DAILY_LIMIT = 80
+DAILY_LIMIT = 80 #do not be gready dont write more than 80 in a day or chage the delay or you will be marked as spam
 MIN_DELAY = 60    
 MAX_DELAY = 300   
 TEST_MODE = False 
@@ -28,7 +28,7 @@ engine = create_engine(DB_FILE)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-def send_email(recipient, company_name):
+def send_email(recipient, company_name):#please change the body according to your needs plus change the resume inside the assets folder 
     # 1. Subject Line
     subject = "Python Internship Application"
     
