@@ -1,0 +1,55 @@
+{
+    "sg_highway": [
+        "tech startups near Iscon Cross Road, S.G. Highway",
+        "SaaS startups near Mondeal Heights, S.G. Highway",
+        "tech startups near Shapath V, S.G. Highway",
+        "AI startups near Sindhu Bhavan Road (SBR), Ahmedabad",
+        "fintech startups near Titanium City Center, S.G. Highway",
+        "tech startups near Gota Bridge, S.G. Highway",
+        "digital startups near Thaltej Cross Road, Ahmedabad",
+        "tech startups near YMCA Club, S.G. Highway",
+        "product startups near Adani Corporate House, Shantigram",
+        "tech startups near Vaishno Devi Circle, Ahmedabad",
+        "software startups near Pakwan Cross Road, S.G. Highway",
+        "tech startups near Infocity, Gandhinagar Highway"
+    ],
+    "prahlad_nagar": [
+        "tech startups near Corporate Road, Prahlad Nagar",
+        "SaaS startups near Titanium Square, Prahlad Nagar",
+        "tech startups near Prahlad Nagar Garden, Ahmedabad",
+        "product startups near Venus Atlantis, Prahlad Nagar",
+        "tech startups near Pinnacle Business Park, Prahlad Nagar",
+        "deep-tech startups near Davanam Arcade, Prahlad Nagar",
+        "tech startups near Anand Nagar Road, Ahmedabad",
+        "SaaS startups near Westgate, 100 Feet Road",
+        "AI startups near Safal Pegasus, Prahlad Nagar",
+        "tech startups near Mondeal Square, Prahlad Nagar"
+    ],
+    "vastrapur_satellite": [
+        "tech startups near Alpha One Mall (Ahmedabad One), Vastrapur",
+        "edtech startups near IIM Ahmedabad, Vastrapur",
+        "tech startups near Courtyard by Marriott, Satellite",
+        "fintech startups near Shivranjani Cross Road, Satellite",
+        "tech startups near Mansi Circle, Vastrapur",
+        "SaaS startups near Management Enclave, Vastrapur",
+        "tech startups near Jhansi ki Rani Statue, Satellite",
+        "tech startups near AMA (Ahmedabad Management Association), Vastrapur"
+    ],
+    "navrangpura_c_g_road": [
+        "tech startups near Mithakhali Six Roads, Navrangpura",
+        "SaaS startups near C.G. Road, Ahmedabad",
+        "tech startups near Swastik Cross Road, Navrangpura",
+        "product startups near Parimal Garden, Ambawadi",
+        "tech startups near Commerce Six Roads, Navrangpura",
+        "AI startups near Gujarat University, Navrangpura",
+        "tech startups near Lal Bungalow, C.G. Road"
+    ],
+    "gift_city": [
+        "fintech startups near GIFT Tower, GIFT City",
+        "blockchain startups near Hiranandani Signature, GIFT City",
+        "tech startups near Brigade International Financial Centre, GIFT City",
+        "SaaS startups near GIFT One Tower, Gandhinagar",
+        "tech startups near World Trade Centre, GIFT City",
+        "AI startups near National Stock Exchange (NSE) IT, GIFT City"
+    ]
+}

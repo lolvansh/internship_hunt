@@ -11,7 +11,7 @@ from database.db_conn import Application
 
 # --- CONFIGURATION ---
 SENDER_EMAIL = "vansh.pandya.77@gmail.com" # please change it to your email
-APP_PASSWORD = 'xxxx xxxx xxxx xxxx'#this is just a placeholder, replace with actual app password and keep it secure in the env
+APP_PASSWORD = 'pfds dtai kadv jido'#this is just a placeholder, replace with actual app password and keep it secure in the env
 RESUME_FILENAME = r"D:\python\cloud-cli\assets\Resume.pdf"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "database", "applications.db")
@@ -30,22 +30,24 @@ session = Session()
 
 def send_email(recipient, company_name):#please change the body according to your needs plus change the resume inside the assets folder 
     # 1. Subject Line
-    subject = "Python Internship Application"
+    subject = "Job Application"
     
     # 2. Body with GitHub Link
     body = f"""\
-Dear Hiring Team at {company_name},
+Hi,
 
-I am writing to express my interest in the Python Developer Internship position at {company_name}.
+I’m Vansh, a Computer Engineering student and Python Developer. I recently finished an internship at Inside Infotech where I focused on building services and shipping software that solves specific problems ranging from automation tools, web dev to secure desktop applications.  
 
-I have strong technical skills in Python, specifically in backend, automation, web scraping, and data handling. 
+I’m really just looking to join a team where I can build more software and contribute to the stack. I’m comfortable with Python, React, and SQL, and I'm currently spending a lot of time working with Django.
 
-I have attached my resume and GitHub profile for your review.
+I’ve attached my resume. Let me know if you’re looking for someone with my profile.
 
 GitHub: https://github.com/lolvansh
 
+
 Best regards,
 Vansh Pandya
++91 9664812556
 """
     
     msg = EmailMessage()
