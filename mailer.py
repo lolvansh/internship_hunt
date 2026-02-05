@@ -7,11 +7,11 @@ from datetime import datetime
 from email.message import EmailMessage
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database.db_conn import Application
+from db_conn import Application
 
 # --- CONFIGURATION ---
 SENDER_EMAIL = "vansh.pandya.77@gmail.com" # please change it to your email
-APP_PASSWORD = 'pfds dtai kadv jido'#this is just a placeholder, replace with actual app password and keep it secure in the env
+APP_PASSWORD = 'xxxx xxxx xxxx xxxx'#this is just a placeholder, replace with actual app password and keep it secure in the env
 RESUME_FILENAME = r"D:\python\cloud-cli\assets\Resume.pdf"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "database", "applications.db")
