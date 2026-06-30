@@ -7,15 +7,16 @@ from datetime import datetime
 from email.message import EmailMessage
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from db_conn import Application
+from database.db_conn import Application
 
 # --- CONFIGURATION ---
 SENDER_EMAIL = "vansh.pandya.77@gmail.com" # please change it to your email
-APP_PASSWORD = 'xxxx xxxx xxxx xxxx'#this is just a placeholder, replace with actual app password and keep it secure in the env
+APP_PASSWORD = 'pfds dtai kadv jido'#this is just a placeholder, replace with actual app password and keep it secure in the env
 RESUME_FILENAME = r"D:\python\cloud-cli\assets\Resume.pdf"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "database", "applications.db")
 DB_FILE = f"sqlite:///{DB_PATH}"
+
 
 # Safety Limits
 DAILY_LIMIT = 80 #do not be gready dont write more than 80 in a day or chage the delay or you will be marked as spam
@@ -36,9 +37,9 @@ def send_email(recipient, company_name):#please change the body according to you
     body = f"""\
 Hi,
 
-I’m Vansh, a Computer Engineering student and Python Developer. I recently finished an internship at Inside Infotech where I focused on building services and shipping software that solves specific problems ranging from automation tools, web dev to secure desktop applications.  
+I’m Vansh, a Computer Engineering student and Full-stack Developer. I recently finished an internship at Inside Infotech where I focused on building services and shipping software that solves specific problems ranging from automation tools, web dev to secure desktop applications.  
 
-I’m really just looking to join a team where I can build more software and contribute to the stack. I’m comfortable with Python, React, and SQL, and I'm currently spending a lot of time working with Django.
+I’m really just looking to join a team where I can build more software and contribute to the stack. I’m comfortable with Python, React, Node, supabase and SQL.
 
 I’ve attached my resume. Let me know if you’re looking for someone with my profile.
 

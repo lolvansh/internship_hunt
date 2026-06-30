@@ -53,7 +53,7 @@ def get_place_details(place_id, api_key):
     base_url = "https://maps.googleapis.com/maps/api/place/details/json"
     params = {
         "place_id": place_id,
-        "fields": "name,website,formatted_phone_number", 
+        "fields": "name,website,formatted_phone_number,email", 
         "key": api_key
     }
     try:
