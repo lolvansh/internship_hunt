@@ -1,5 +1,7 @@
 # Automate Intership hunt 
 
+![YOLO](https://img.shields.io/badge/YOLO-main-red)
+
 v 0.2
 Right now its not fully connected to each other, i will do it in upcoming days, what it does is make it easy to apply for jobs in your specified area, it finds company near you, scrap their company url and emais then starts sending cold emails to those companies
 
@@ -12,6 +14,7 @@ Right now its not fully connected to each other, i will do it in upcoming days, 
 3. install the dependencies
 4. create a env where you save your app pass and api
 5. create your own queries.json
+6. running all the main.py it will directly run all the scripts except the mailer.py which you have to run by yourself.
 ```
 
 
